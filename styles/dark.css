@@ -1,0 +1,275 @@
+/* note that Internet Explorer does not support css variables */
+:root {
+    --dark: #000;
+    --medium: #1b1b1b;
+    --light: #2e2e2e;
+    --primary: #7a7e4f;
+}
+
+.dark-mode-button {
+    background: transparent;
+    border: none;
+    height: 40px;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+.top-dark-mode-button {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    z-index: 1000;
+    transition: .3s ease-in; /* Smooth transition added */
+}
+
+.top-dark-mode-button .dark-toggle {
+    background: rgb(230, 230, 230);
+    border-color: rgb(230, 230, 230);
+    width: 35px;
+}
+
+.top-dark-mode-button:after {
+    content: 'DARK';
+    position: absolute;
+    color: #fff;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 22px;
+    top: 10px;
+    transition: .1s ease-in; /* Smooth transition added */
+}
+
+body.dark-mode .top-dark-mode-button:after {
+    content: 'LIGHT';
+    color: var(--primary);
+    top: 12px;
+}
+
+.dark-toggle {
+    margin: 0;
+    width: 30px;
+    height: 16px;
+    z-index: 20;
+    border-radius: 10px;
+    background: transparent;
+    border: 3px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: .3s ease; /* Smooth transition added */
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 1000;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+body.dark-mode .dark-toggle {
+    background: rgb(67,183,255);
+    background: -o-linear-gradient(left, rgba(67,183,255,1) 0%, rgba(0,221,246,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(67,183,255,1)), to(rgba(0,221,246,1)));
+    background: linear-gradient(90deg, rgba(67,183,255,1) 0%, rgba(0,221,246,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#43b7ff",endColorstr="#00ddf6",GradientType=1);
+    border: none;
+}
+
+.dark-toggle span {
+    height: 20px;
+    width: 20px;
+    left: -8px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    transition: .3s ease; /* Smooth transition added */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+body.dark-mode .dark-toggle span {
+    left: 15px;
+    transition: .3s ease; /* Smooth transition added */
+}
+
+.top-dark-mode-button .dark-toggle {
+    background: rgb(230, 230, 230);
+    border-color: rgb(230, 230, 230);
+    width: 35px;
+}
+
+/* Begin adding your dark mode styles here, like so: */
+body.dark-mode {
+    background-color: #2e2e2e;
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .header p {
+    color: white;
+    transition: color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .header h2 {
+    color: white;
+    transition: color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .header {
+    background-color: #1b1b1b;
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .header .button {
+    background-color: #2e2e2e;
+    color: #fff;
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .header .button:hover {
+    background-color: #7a7e4f;
+}
+
+body.dark-mode .pomodoro-container {
+    background-color: #201e1e;
+    color: #fff;
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+body.dark-mode .pomodoro-container .label {
+    color: #fff;
+}
+
+body.dark-mode .pomodoro-container .btn-updown {
+    color: #fff;
+}
+
+body.dark-mode .pomodoro-container .btn-controller {
+    color: #fff;
+}
+
+body.dark-mode .pomodoro-container .playerButton {
+    border-top: solid 3px #ffffff;
+}
+
+body.dark-mode .music-container {
+    --white: #201e1e;
+    --lightblack: #ffffff;
+}
+
+body.dark-mode .music-container .controls i {
+    color: white;
+}
+
+body.dark-mode .music-container .top-bar i {
+    color: white;
+}
+
+body.dark-mode .music-container .play-pause i {
+    -webkit-text-fill-color: white;
+}
+
+body.dark-mode .music-container .controls .play-pause {
+    background: linear-gradient(#fff6f6 0%, var(--darkwhite) 100%);
+}
+
+body.dark-mode .todo-container .input-field textarea {
+    background-color: #201e1e;
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .todo-box {
+    background-color: #201e1e;
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .todo-container .pending-tasks span {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .todo-container .todoLists .list {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .tutorial-content {
+    background-color: #2e2e2e;
+}
+
+body.dark-mode .tutorial-content h1 {
+    color: white;
+}
+
+body.dark-mode .feature h2 {
+    color: white;
+}
+
+body.dark-mode .feature.dark .content {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .feature.light .content {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .feature ul li {
+    color: #fff;
+}
+
+body.dark-mode .feature-box {
+    background-color: #1b1b1b;
+}
+
+/* Smooth transition when switching back to light mode */
+body:not(.dark-mode) {
+    transition: background-color 0.3s ease; /* Smooth transition added */
+}
+
+body:not(.dark-mode) .header p,
+body:not(.dark-mode) .header h2,
+body:not(.dark-mode) .header .button,
+body:not(.dark-mode) .pomodoro-container,
+body:not(.dark-mode) .pomodoro-container .label,
+body:not(.dark-mode) .pomodoro-container .btn-updown,
+body:not(.dark-mode) .pomodoro-container .btn-controller,
+body:not(.dark-mode) .pomodoro-container .playerButton,
+body:not(.dark-mode) .music-container .controls i,
+body:not(.dark-mode) .music-container .top-bar i,
+body:not(.dark-mode) .music-container .play-pause i,
+body:not(.dark-mode) .music-container .controls .play-pause,
+body:not(.dark-mode) .todo-container .input-field textarea,
+body:not(.dark-mode) .todo-container .pending-tasks span,
+body:not(.dark-mode) .todo-container .todoLists .list,
+body:not(.dark-mode) .tutorial-content h1,
+body:not(.dark-mode) .feature h2,
+body:not(.dark-mode) .feature.dark .content,
+body:not(.dark-mode) .feature.light .content,
+body:not(.dark-mode) .feature ul li,
+body:not(.dark-mode) .feature-box {
+    transition: color 0.3s ease; /* Smooth transition added */
+}

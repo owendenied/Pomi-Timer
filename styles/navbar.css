@@ -1,0 +1,59 @@
+.header {
+    background-color: rgb(240, 240, 208);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #030303;
+    padding: 20px; /* Increase padding for better spacing */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+}
+
+.header .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center title and subtitle horizontally */
+    margin-bottom: 10px; /* Add margin below the title and subtitle */
+}
+
+.header .webname {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header .subtitle {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: center; /* Add space between buttons */
+    align-items: baseline; /* Center buttons vertically */
+    margin-top: 10px; /* Add margin above the buttons */
+}
+
+
+.header .button {
+    background-color: #f6f8e3;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 5px; /* Add margin between buttons */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.header .button:first-child {
+    margin-top: 0; /* Remove top margin from the first button */
+}
+
+.header .button:hover {
+    background-color: #7a7e4f;
+}
+
